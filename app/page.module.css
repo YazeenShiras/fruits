@@ -1043,11 +1043,12 @@
     text-transform: uppercase;
     color: #fefefc;
   }
-  .header {
-    justify-content: flex-end;
-  }
   .header_left {
     display: none;
+  }
+  .header_right {
+    justify-content: space-between;
+    width: 100%;
   }
   .products_container {
     display: flex;
