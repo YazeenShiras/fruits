@@ -16,8 +16,8 @@
   width: 100%;
   background: transparent;
   padding: 30px 10vw;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  top: 0;
 }
 
 .header_left > ul {

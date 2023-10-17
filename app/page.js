@@ -2,70 +2,75 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
-  var scroll = window.pageYOffset;
-
-  useEffect(() => {
-    window.onscroll = function (event) {
-      if (scroll < 100) {
-        setScrolled(true);
-      }
-    };
-  }, [scroll]);
-
   return (
     <main className={styles.main}>
-      <div
-        className={styles.header}
-        style={
-          scrolled
-            ? { backgroundColor: "#febd53" }
-            : { background: "transparent" }
-        }
-        id="header"
-      >
-        <div className={styles.header_left}>
-          <ul>
-            <li>
-              <p>Home</p>
-              <Image src="/icons/arrowDown.svg" height={20} width={20} alt="" />
-            </li>
-            <li>
-              <p>Shop</p>
-              <Image src="/icons/arrowDown.svg" height={20} width={20} alt="" />
-            </li>
-            <li>
-              <p>Blog</p>
-              <Image src="/icons/arrowDown.svg" height={20} width={20} alt="" />
-            </li>
-            <li>
-              <p>Pages</p>
-              <Image src="/icons/arrowDown.svg" height={20} width={20} alt="" />
-            </li>
-            <li>
-              <p>Elements</p>
-              <Image src="/icons/arrowDown.svg" height={20} width={20} alt="" />
-            </li>
-            <li>
-              <p>Buy</p>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.header_right}>
-          <p>Login/Register</p>
-          <Image src="/icons/search.svg" height={17} width={17} alt="" />
-          <Image src="/icons/love.svg" height={20} width={20} alt="" />
-          <div className={styles.cart}>
-            <Image src="/icons/cart.svg" height={20} width={20} alt="" />
-            <div className={styles.cart_count}>0</div>
-          </div>
-          <p>$0.00</p>
-        </div>
-      </div>
       <div className={styles.section_one}>
+        <div className={styles.header}>
+          <div className={styles.header_left}>
+            <ul>
+              <li>
+                <p>Home</p>
+                <Image
+                  src="/icons/arrowDown.svg"
+                  height={20}
+                  width={20}
+                  alt=""
+                />
+              </li>
+              <li>
+                <p>Shop</p>
+                <Image
+                  src="/icons/arrowDown.svg"
+                  height={20}
+                  width={20}
+                  alt=""
+                />
+              </li>
+              <li>
+                <p>Blog</p>
+                <Image
+                  src="/icons/arrowDown.svg"
+                  height={20}
+                  width={20}
+                  alt=""
+                />
+              </li>
+              <li>
+                <p>Pages</p>
+                <Image
+                  src="/icons/arrowDown.svg"
+                  height={20}
+                  width={20}
+                  alt=""
+                />
+              </li>
+              <li>
+                <p>Elements</p>
+                <Image
+                  src="/icons/arrowDown.svg"
+                  height={20}
+                  width={20}
+                  alt=""
+                />
+              </li>
+              <li>
+                <p>Buy</p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.header_right}>
+            <p>Login/Register</p>
+            <Image src="/icons/search.svg" height={17} width={17} alt="" />
+            <Image src="/icons/love.svg" height={20} width={20} alt="" />
+            <div className={styles.cart}>
+              <Image src="/icons/cart.svg" height={20} width={20} alt="" />
+              <div className={styles.cart_count}>0</div>
+            </div>
+            <p>$0.00</p>
+          </div>
+        </div>
         <div className={styles.container}>
           <div className={styles.layer_one}>
             <div className={styles.layer_one_top}>
